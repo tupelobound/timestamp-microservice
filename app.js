@@ -3,6 +3,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+// serve static assets from the 'public' directory
+app.use(express.static('public'))
+
 // respond to HTTP GET request with string
 app.get('/', (req, res) => {
   res.send('Hello World!')
